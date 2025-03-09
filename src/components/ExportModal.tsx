@@ -314,6 +314,35 @@ function generateSectionHTML(section: PortfolioSection): string {
           </div>
         </section>`;
 
+      case SectionType.EXPERIENCE:
+    return `
+      <section id="${section.type}" class="section experience-section">
+        <h2>${section.title}</h2>
+        <div class="experience-content">
+          ${section.content?.map(exp => `
+            <div class="experience-item">
+              <h3>${exp.position} at ${exp.company}</h3>
+              <p>${exp.startDate} - ${exp.endDate || 'Present'}</p>
+              <p>${exp.description}</p>
+            </div>
+          `).join('')}
+        </div>
+      </section>`;
+      
+  case SectionType.EDUCATION:
+    return `
+      <section id="${section.type}" class="section education-section">
+        <h2>${section.title}</h2>
+        <div class="education-content">
+          ${section.content?.map(edu => `
+            <div class="education-item">
+              <h3>${edu.institution}</h3>
+              <p>${edu.degree} (${edu.startDate} - ${edu.endDate})</p>
+            </div>
+          `).join('')}
+        </div>
+      </section>`;
+
     default:
       return `
         <section id="${section.type}" class="section">
