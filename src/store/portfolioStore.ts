@@ -51,6 +51,22 @@ export const usePortfolioStore = create<PortfolioState>((set) => ({
         content: null,
         isOptional: false,
         order: 2
+      },
+      {
+        id: '4',
+        type:  'experience',
+        title: 'Experience',
+        content: null,
+        isOptional: false,
+        order: 3
+      },
+      {
+        id: '5',
+        type: 'education',
+        title: 'Education',
+        content: null,
+        isOptional: false,
+        order: 4
       }
     ]
   },
