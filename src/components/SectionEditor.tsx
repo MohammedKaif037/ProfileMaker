@@ -50,6 +50,55 @@ export const SectionEditor: React.FC<Props> = ({ section, onClose }) => {
           </div>
         );
       // Add more section type editors here
+            case SectionType.EXPERIENCE:
+      return (
+        <div className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Position</label>
+            <input
+              type="text"
+              value={section.content?.position || ''}
+              onChange={(e) => handleContentChange({ ...section.content, position: e.target.value })}
+              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Company</label>
+            <input
+              type="text"
+              value={section.content?.company || ''}
+              onChange={(e) => handleContentChange({ ...section.content, company: e.target.value })}
+              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            />
+          </div>
+          {/* Add more experience fields */}
+        </div>
+      );
+
+    case SectionType.EDUCATION:
+      return (
+        <div className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Institution</label>
+            <input
+              type="text"
+              value={section.content?.institution || ''}
+              onChange={(e) => handleContentChange({ ...section.content, institution: e.target.value })}
+              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Degree</label>
+            <input
+              type="text"
+              value={section.content?.degree || ''}
+              onChange={(e) => handleContentChange({ ...section.content, degree: e.target.value })}
+              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            />
+          </div>
+          {/* Add more education fields */}
+        </div>
+      );
       default:
         return <div>Editor not implemented for this section type</div>;
     }
