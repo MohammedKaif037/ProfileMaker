@@ -3,10 +3,23 @@ import { Template } from '../types/portfolio';
 import { usePortfolioStore } from '../store/portfolioStore';
 import { Check } from 'lucide-react';
 
+// src/components/TemplateSelector.tsx
 const templates: Template[] = [
   {
-    id: 'minimal',
-    name: 'Minimal',
+    id: 'professional',
+    name: 'Professional',
+    thumbnail: 'https://images.unsplash.com/photo-1581291518633-83d73e074374?auto=format&fit=crop&w=300&q=80',
+    styles: {
+      primary: '#1a202c',
+      secondary: '#4a5568',
+      accent: '#48bb78',
+      background: '#f7fafc',
+      text: '#2d3748'
+    }
+  },
+  {
+    id: 'minimalistic',
+    name: 'Minimalistic',
     thumbnail: 'https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&w=300&q=80',
     styles: {
       primary: '#0f172a',
@@ -14,18 +27,6 @@ const templates: Template[] = [
       accent: '#3b82f6',
       background: '#ffffff',
       text: '#1e293b'
-    }
-  },
-  {
-    id: 'modern',
-    name: 'Modern',
-    thumbnail: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=300&q=80',
-    styles: {
-      primary: '#18181b',
-      secondary: '#71717a',
-      accent: '#8b5cf6',
-      background: '#fafafa',
-      text: '#27272a'
     }
   },
   {
