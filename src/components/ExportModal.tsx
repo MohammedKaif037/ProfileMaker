@@ -701,6 +701,21 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   padding: 2rem;
 }
+ /* Experience Section */
+  .experience-section {
+    margin-bottom: 4rem;
+  }
+  .experience-item {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Education Section */
+  .education-section {
+    margin-bottom: 4rem;
+  }
+  .education-item {
+    margin-bottom: 1.5rem;
+  }
 
 .download-button {
   display: inline-block;
