@@ -18,7 +18,9 @@ export enum SectionType {
   BLOG = 'blog',
   OPEN_SOURCE = 'openSource',
   TESTIMONIALS = 'testimonials',
-  RESUME = 'resume'
+  RESUME = 'resume',
+  EXPERIENCE = 'experience',
+  EDUCATION = 'education'
 }
 
 export type Template = {
